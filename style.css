@@ -1,17 +1,102 @@
+/* ===== Body & Fonts ===== */
 body {
-  background-color: #0b1c2d;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
   color: white;
-  font-family: Arial;
+  background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1c92d2, #f2fcfe);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* ===== Hero Section ===== */
+.hero {
   text-align: center;
+  padding: 100px 20px;
 }
 
-header {
-  background: #123456;
-  padding: 20px;
+.big-text {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffdc00, #ff4b2b, #1c92d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textSlide 5s ease-in-out infinite alternate;
 }
 
-nav a {
+.sub-text {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #ff4b2b;
   color: white;
-  margin: 10px;
+  border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
+
+.btn:hover {
+  background: #ffdc00;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffdc00;
+  text-shadow: 1px 1px 5px black;
+}
+
+/* ===== Features Cards ===== */
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 15px;
+  padding: 30px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+/* ===== Animations ===== */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes textSlide {
+  0% {letter-spacing: 2px;}
+  50% {letter-spacing: 8px;}
+  100% {letter-spacing: 2px;}
+}
+
+
